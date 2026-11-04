@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate v1.4 from the unchanged v1.3 ZIP (Python 3, stdlib only)."""
+"""Build and validate v1.4.1 from the unchanged v1.3 ZIP (Python 3, stdlib only)."""
 
 import argparse
 import hashlib
@@ -10,13 +10,14 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'Siege-Yom-Kippur-1.21.11-v1.3-optimized.zip'
-TARGET = ROOT / 'Siege-Yom-Kippur-1.21.11-v1.4-resources.zip'
+PREVIOUS = ROOT / 'Siege-Yom-Kippur-1.21.11-v1.4-resources.zip'
+TARGET = ROOT / 'Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip'
 OVERLAY = ROOT / 'resource-overrides'
 BASE_SHA1 = 'e69367cd7d3e2767d279d9d30f0ec3b9a97e8b33'
 ITEMS = {
     'dragon_breath': ('fuel', 'Fuel'),
     'blaze_powder': ('oil', 'Oil'),
-    'ghast_tear': ('rubber', 'Gummi'),
+    'ghast_tear': ('rubber', 'Rubber'),
     'redstone': ('aluminium', 'Aluminium'),
     'netherite_ingot': ('steel', 'Steel'),
 }
@@ -92,7 +93,7 @@ def validate():
     require(f'resource-pack={URL}\n' in properties, 'Incorrect server download URL.')
     require(f'resource-pack-sha1={checksum}\n' in properties, 'Incorrect server SHA-1.')
     sums = (ROOT / 'SHA1SUMS').read_text(encoding='utf-8')
-    for path in (BASE, TARGET):
+    for path in (BASE, PREVIOUS, TARGET):
         require(f'{sha1(path)}  {path.name}\n' in sums, f'Missing checksum: {path.name}')
     print(f'OK: {len(names)} ZIP entries; {json_count} JSON documents; '
           f'{preserved} original entries preserved byte-for-byte.')
@@ -117,7 +118,7 @@ def build():
             pack.writestr(info, data, compresslevel=9)
     staging.replace(TARGET)
     checksum = sha1(TARGET)
-    (ROOT / 'SHA1SUMS').write_text(''.join(f'{sha1(p)}  {p.name}\n' for p in (BASE, TARGET)),
+    (ROOT / 'SHA1SUMS').write_text(''.join(f'{sha1(p)}  {p.name}\n' for p in (BASE, PREVIOUS, TARGET)),
                                  encoding='utf-8', newline='\n')
     (ROOT / 'server.properties.example').write_text(
         f'resource-pack={URL}\nresource-pack-sha1={checksum}\n', encoding='utf-8', newline='\n')

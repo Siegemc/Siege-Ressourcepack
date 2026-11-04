@@ -37,7 +37,9 @@
         16,
         16
       ],
-      "max_object_dimension": 14,
+      "max_object_dimension": 16,
+      "crop": false,
+      "preserve_full_source_canvas": true,
       "palette_colors": 8,
       "upscale": "2x nearest-neighbor"
     }

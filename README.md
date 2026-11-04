@@ -1,15 +1,15 @@
 # Siege Resourcepack
 
-Siege Yom Kippur **v1.4 Resources** für Minecraft Java Edition **1.21.11**.
+Siege Yom Kippur **v1.4.1 Resources** für Minecraft Java Edition **1.21.11**.
 Erweitert das bisherige v1.3-Pack um fünf Rohstoffe in Minecraft-Pixeloptik,
 inspiriert von militärischen Nachschubmaterialien der 1970er-Jahre.
 
 ## Download
 
-[Aktuelles Resourcepack herunterladen](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4-resources.zip)
+[Aktuelles Resourcepack herunterladen](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip)
 
 Die ZIP ist das vollständige Pack und kann direkt installiert werden.
-Die bisherige [Version v1.3](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.3-optimized.zip)
+Die bisherige [Version v1.4](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4-resources.zip)
 bleibt als unveränderte Vorgängerversion verfügbar.
 
 ## Neue Rohstoffe
@@ -18,7 +18,7 @@ bleibt als unveränderte Vorgängerversion verfügbar.
 | --- | --- | --- |
 | `minecraft:dragon_breath` | Fuel | Olivgrüner Treibstoffkanister mit X-Verstärkung |
 | `minecraft:blaze_powder` | Oil | Dunkles Ölfass mit Rippen und Tropfensymbol |
-| `minecraft:ghast_tear` | Gummi | Schwarzer Gummireifen mit grobem Profil |
+| `minecraft:ghast_tear` | Rubber | Schwarzer Gummireifen mit grobem Profil |
 | `minecraft:redstone` | Aluminium | Sauberer, heller silberblauer Minecraft-Barren |
 | `minecraft:netherite_ingot` | Steel | Sauberer, dunkelgrauer Minecraft-Barren mit heller Metallkante |
 
@@ -29,6 +29,8 @@ Gegenstände erhalten die neuen Modelle ohne `CustomModelData` oder zusätzliche
 Aluminium und Steel orientieren sich an der klassischen Minecraft-Ingot-Form:
 große, ruhige Farbflächen ohne Flecken oder Rost. Die Barren verwenden ein
 16×16-Pixelraster, das ohne Glättung auf 32×32 Pixel vergrößert wurde.
+Seit v1.4.1 bleibt das vollständige Raster erhalten, statt die Kontur auf 14 Pixel
+zu stauchen. Beide Barren haben dadurch die pixelgenaue Kontur des Vanilla-Eisenbarrens.
 Die Anzeigenamen gelten in Deutsch, Englisch (US) und Englisch (UK).
 Minecraft-IDs, Rezepte und Spielmechaniken bleiben bestehen; platziertes Redstone bleibt Redstone.
 Serverseitig gesetzte eigene Namen oder `item_model`-Komponenten haben weiterhin Vorrang.
@@ -41,8 +43,8 @@ Nur die Pack-Beschreibung wird aktualisiert; die Rohstoffdateien kommen neu hinz
 Diese beiden Werte in der bestehenden `server.properties` setzen und den Server neu starten:
 
 ```properties
-resource-pack=https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4-resources.zip
-resource-pack-sha1=f90fa3713a84a778b1ffc84e860f698e99aeafcc
+resource-pack=https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip
+resource-pack-sha1=35b77336c9d5a7a76001cb838d177293dc4b5918
 ```
 
 Die gleichen Werte stehen in `server.properties.example`. Bei einem Hosting-Panel
@@ -83,7 +85,7 @@ python scripts/build_pack.py
 python scripts/build_pack.py --check
 ```
 
-Der Neubau erzeugt die v1.4-ZIP und aktualisiert `SHA1SUMS` sowie
+Der Neubau erzeugt die v1.4.1-ZIP und aktualisiert `SHA1SUMS` sowie
 `server.properties.example`. Nach späteren Texturänderungen die Prüfsumme und Größe
 in dieser README ebenfalls anpassen.
 Die Prüfung kontrolliert ZIP-CRC, alle JSON-Dateien, Item-/Modell-/Texturzuordnungen,
@@ -92,9 +94,9 @@ Erhalt sämtlicher nicht überschriebener Originaldateien.
 
 ## Paketdaten
 
-- Datei: `Siege-Yom-Kippur-1.21.11-v1.4-resources.zip`
-- Größe: 5.951.609 Bytes
-- SHA-1: `f90fa3713a84a778b1ffc84e860f698e99aeafcc`
+- Datei: `Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip`
+- Größe: 5.951.581 Bytes
+- SHA-1: `35b77336c9d5a7a76001cb838d177293dc4b5918`
 - Ressourcenpaket-Format: 75 (Minecraft Java 1.21.11)
 - `pack.mcmeta` und `assets/` liegen direkt im ZIP-Hauptverzeichnis.
 
