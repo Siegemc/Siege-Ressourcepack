@@ -19,13 +19,16 @@ bleibt als unveränderte Vorgängerversion verfügbar.
 | `minecraft:dragon_breath` | Fuel | Olivgrüner Treibstoffkanister mit X-Verstärkung |
 | `minecraft:blaze_powder` | Oil | Dunkles Ölfass mit Rippen und Tropfensymbol |
 | `minecraft:ghast_tear` | Gummi | Schwarzer Gummireifen mit grobem Profil |
-| `minecraft:redstone` | Aluminium | Heller silberner Aluminiumbarren |
-| `minecraft:netherite_ingot` | Steel | Dunkler Stahlbarren mit Walzhaut |
+| `minecraft:redstone` | Aluminium | Sauberer, heller silberblauer Minecraft-Barren |
+| `minecraft:netherite_ingot` | Steel | Sauberer, dunkelgrauer Minecraft-Barren mit heller Metallkante |
 
 ![Vorschau der fünf fertigen 32×32-Texturen](docs/resources-preview.png)
 
 Die Texturen sind 32×32-Pixel-PNGs mit transparentem Hintergrund. Die normalen
 Gegenstände erhalten die neuen Modelle ohne `CustomModelData` oder zusätzliche Mods.
+Aluminium und Steel orientieren sich an der klassischen Minecraft-Ingot-Form:
+große, ruhige Farbflächen ohne Flecken oder Rost. Die Barren verwenden ein
+16×16-Pixelraster, das ohne Glättung auf 32×32 Pixel vergrößert wurde.
 Die Anzeigenamen gelten in Deutsch, Englisch (US) und Englisch (UK).
 Minecraft-IDs, Rezepte und Spielmechaniken bleiben bestehen; platziertes Redstone bleibt Redstone.
 Serverseitig gesetzte eigene Namen oder `item_model`-Komponenten haben weiterhin Vorrang.
@@ -39,7 +42,7 @@ Diese beiden Werte in der bestehenden `server.properties` setzen und den Server 
 
 ```properties
 resource-pack=https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4-resources.zip
-resource-pack-sha1=ab9b08bba19267e0b9de80f8c7886c9266c587f7
+resource-pack-sha1=f90fa3713a84a778b1ffc84e860f698e99aeafcc
 ```
 
 Die gleichen Werte stehen in `server.properties.example`. Bei einem Hosting-Panel
@@ -90,8 +93,8 @@ Erhalt sämtlicher nicht überschriebener Originaldateien.
 ## Paketdaten
 
 - Datei: `Siege-Yom-Kippur-1.21.11-v1.4-resources.zip`
-- Größe: 5.952.914 Bytes
-- SHA-1: `ab9b08bba19267e0b9de80f8c7886c9266c587f7`
+- Größe: 5.951.609 Bytes
+- SHA-1: `f90fa3713a84a778b1ffc84e860f698e99aeafcc`
 - Ressourcenpaket-Format: 75 (Minecraft Java 1.21.11)
 - `pack.mcmeta` und `assets/` liegen direkt im ZIP-Hauptverzeichnis.
 

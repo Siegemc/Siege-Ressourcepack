@@ -15,13 +15,14 @@
     },
     {
       "name": "aluminium",
-      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE bright pale silver aluminium ingot, classic Minecraft ingot item silhouette, broad long beveled trapezoidal rectangular industrial cast metal bar, long axis rises slightly from left foreground to right background, visible broad light top plane and medium-light cool gray front and right faces, clean ivory white highlight along top-left bevel, a few subtle pale blue-gray pixels. Bright lightweight metal, plain unmarked surface. Clearly light silver, not dark steel."
+      "prompt": "Use case: style-transfer. Asset type: Minecraft item texture. The input is the original Minecraft iron-ingot sprite, enlarged with nearest-neighbor. EDIT this into a different material while preserving its EXACT classic Minecraft ingot silhouette, diagonal orientation, proportions, flat broad top, short front face, right face and 16x16 pixel grid. The outline must match the input, with the same stepped pixel boundaries. This is a palette-and-shading edit, not a new 3D object. Clean simple vanilla Minecraft pixel art, maximum 7 flat colors, one uniform color per square pixel. Crisp hard edges, genuine transparent background and transparent padding same as reference. No gradients, glow, antialiasing, smoothing, noise, small pixel details, scratches, dents, rust, cracks, stains, random speckles, logos, letters or text. No tall or wedge-shaped prism. Strong simple edge contrast and clear planar shading, legible at 16x16. Output a square enlarged pixel sprite like the reference. Material: ALUMINIUM. Very light clean cool silver ingot, pearl-white broad top plane, a restrained icy blue-silver right face, medium-light silver front face, clean white bevel highlight at upper left, medium cool blue-gray outline. The top stays very bright. Subtle blue hint makes it distinct from ordinary iron, but absolutely metallic SILVER, not cyan, diamond or glass. Smooth clean lightweight metal. This must read as the bright silver member of a two-metal set."
     },
     {
       "name": "steel",
-      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE dark industrial steel ingot, classic Minecraft ingot item silhouette, broad long beveled trapezoidal rectangular forged metal bar, long axis rises slightly from left foreground to right background, broad medium-dark gunmetal top plane and darker blue-gray front and right faces, restrained slate gray edge highlights, two or three dark mill-scale marks, muted gray-brown edge wear. Plain unmarked surface. Clearly dark heavy steel, no purple or magical effects, not bright aluminium."
+      "prompt": "Use case: style-transfer. Asset type: Minecraft item texture. The input is the original Minecraft iron-ingot sprite, enlarged with nearest-neighbor. EDIT this into a different material while preserving its EXACT classic Minecraft ingot silhouette, diagonal orientation, proportions, flat broad top, short front face, right face and 16x16 pixel grid. The outline must match the input, with the same stepped pixel boundaries. This is a palette-and-shading edit, not a new 3D object. Clean simple vanilla Minecraft pixel art, maximum 7 flat colors, one uniform color per square pixel. Crisp hard edges, genuine transparent background and transparent padding same as reference. No gradients, glow, antialiasing, smoothing, noise, small pixel details, scratches, dents, rust, cracks, stains, random speckles, logos, letters or text. No tall or wedge-shaped prism. Strong simple edge contrast and clear planar shading, legible at 16x16. Output a square enlarged pixel sprite like the reference. Material: STEEL. Clean medium-dark gunmetal gray ingot, neutral slate-gray broad top plane, darker graphite front face, charcoal right face, a bold clean silver-gray bevel highlight at upper left, strong charcoal outline. The top is bright enough to read as metallic. Strong contrast between flat metal planes. Muted cool undertone only, no purple, no brown, not black netherite, not iron-white. Solid clean heavy industrial steel. This must read as the darker gray member of a two-metal set."
     }
   ],
+  "ingot_reference": "Vanilla Minecraft Java 1.21.11 iron_ingot texture, enlarged with nearest-neighbor",
   "export": {
     "size": [
       32,
@@ -30,6 +31,15 @@
     "max_object_dimension": 28,
     "resampling": "nearest-neighbor",
     "alpha_threshold": 200,
-    "palette_colors": 32
+    "palette_colors": 32,
+    "ingots": {
+      "logical_grid": [
+        16,
+        16
+      ],
+      "max_object_dimension": 14,
+      "palette_colors": 8,
+      "upscale": "2x nearest-neighbor"
+    }
   }
 }
