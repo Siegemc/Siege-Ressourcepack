@@ -1,0 +1,35 @@
+{
+  "tool": "Built-in image_gen",
+  "prompts": [
+    {
+      "name": "fuel",
+      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE olive-drab 1970s military steel jerrycan for fuel, rectangular body with strong stamped X reinforcement on broad front, distinct triple bridge carrying handle with transparent opening at top, short filler cap at upper left, muted khaki highlights, dark olive side, a few sandy edge chips. Tall solid silhouette."
+    },
+    {
+      "name": "oil",
+      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE squat cylindrical 1970s industrial oil drum, very dark charcoal blue painted steel, two raised horizontal steel reinforcing ribs, visible elliptical top with a small bung cap, tiny ochre rust chips at rim. A small simple ochre oil-droplet pictogram centered on front, drawn in chunky pixels and no text. Distinguish from green fuel jerrycan. Tall solid silhouette."
+    },
+    {
+      "name": "rubber",
+      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE thick black rubber truck tire without a metal wheel or rim, 1970s military supply, upright three-quarter view, CLEAR TRANSPARENT central hole, chunky blocky tread along outer right edge, charcoal sidewall and muted gray edge highlights, matte vulcanized rubber with a little desert dust on a few outer tread blocks. Strong donut silhouette. No metal hub."
+    },
+    {
+      "name": "aluminium",
+      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE bright pale silver aluminium ingot, classic Minecraft ingot item silhouette, broad long beveled trapezoidal rectangular industrial cast metal bar, long axis rises slightly from left foreground to right background, visible broad light top plane and medium-light cool gray front and right faces, clean ivory white highlight along top-left bevel, a few subtle pale blue-gray pixels. Bright lightweight metal, plain unmarked surface. Clearly light silver, not dark steel."
+    },
+    {
+      "name": "steel",
+      "prompt": "Use case: stylized-concept. Asset type: Minecraft Java inventory item sprite for a 1973 Yom Kippur era military logistics resource pack. Single isolated centered object on genuine transparent background. EXACT aesthetic: chunky low-resolution 32x32 pixel art enlarged to fill a square canvas, visible square pixel steps, crisp hard edges, no antialiasing, no smooth shading, no realistic rendering. Each logical pixel is a large square. Limited palette of 8-12 colors. Bold dark one-pixel outline, light from upper left, subtle blocky wear, easy to read at 32x32. Three-quarter front view with slight visible top and right side. Object fills around 80 percent of square with transparent margins. No lettering, captions, letters, logos, flags, watermarks, ground plane or cast shadow. One icon only. Subject: ONE dark industrial steel ingot, classic Minecraft ingot item silhouette, broad long beveled trapezoidal rectangular forged metal bar, long axis rises slightly from left foreground to right background, broad medium-dark gunmetal top plane and darker blue-gray front and right faces, restrained slate gray edge highlights, two or three dark mill-scale marks, muted gray-brown edge wear. Plain unmarked surface. Clearly dark heavy steel, no purple or magical effects, not bright aluminium."
+    }
+  ],
+  "export": {
+    "size": [
+      32,
+      32
+    ],
+    "max_object_dimension": 28,
+    "resampling": "nearest-neighbor",
+    "alpha_threshold": 200,
+    "palette_colors": 32
+  }
+}
