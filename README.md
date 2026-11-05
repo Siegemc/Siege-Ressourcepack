@@ -1,16 +1,30 @@
 # Siege Resourcepack
 
-Siege Yom Kippur **v1.4.1 Resources** für Minecraft Java Edition **1.21.11**.
-Erweitert das bisherige v1.3-Pack um fünf Rohstoffe in Minecraft-Pixeloptik,
-inspiriert von militärischen Nachschubmaterialien der 1970er-Jahre.
+Siege Yom Kippur **v1.5 Animated** für Minecraft Java Edition **1.21.11**.
+Enthält alle Inhalte von v1.4.1 (inklusive der fünf Rohstoffe) und zusätzlich
+die First-Person-Animationen aller zwölf Yom-Kippur-Waffen sowie den AT-4.
 
 ## Download
 
-[Aktuelles Resourcepack herunterladen](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip)
+[Aktuelles Resourcepack herunterladen](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.5-animated.zip)
 
 Die ZIP ist das vollständige Pack und kann direkt installiert werden.
-Die bisherige [Version v1.4](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4-resources.zip)
-bleibt als unveränderte Vorgängerversion verfügbar.
+Die statische [Version v1.4.1](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip)
+(ohne Waffenanimationen, 5,95 MB) und [v1.4](https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4-resources.zip)
+bleiben als unveränderte Vorgängerversionen verfügbar.
+
+## Waffenanimationen (v1.5)
+
+v1.5 enthält die gebackenen Animations-Posen für AK-47, AT-4, Barrett M82,
+Beretta M1951, FN FAL, Galil, Ithaca 37, M16A1, M4A1, Mossberg 500, RPG-7 und Uzi.
+Die Posen werden im Repository Siege-xc-xv aus den Blockbench-Modellen kompiliert
+(`scripts/build_siegemc_yom_kippur_pack.py`, danach `tools/optimize_gun_pack.py`)
+und mit `resource-overrides/` dieses Repositories zusammengeführt.
+
+Die Animationen spielen nur, wenn der Server das Pack mit der Pack-ID
+`975cfc35-75b4-4190-a934-d02a54c94378` sendet und die passenden XC-Manifeste in
+`plugins/xc/animations/` installiert sind. Pack und Manifeste stammen immer aus
+demselben Build. Ohne passende ID zeigt XC die statischen Waffen.
 
 ## Neue Rohstoffe
 
@@ -40,15 +54,17 @@ Nur die Pack-Beschreibung wird aktualisiert; die Rohstoffdateien kommen neu hinz
 
 ## Auf einem Minecraft-Server eintragen
 
-Diese beiden Werte in der bestehenden `server.properties` setzen und den Server neu starten:
+Diese drei Werte in der bestehenden `server.properties` setzen und den Server neu starten:
 
 ```properties
-resource-pack=https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip
-resource-pack-sha1=35b77336c9d5a7a76001cb838d177293dc4b5918
+resource-pack=https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/Siege-Yom-Kippur-1.21.11-v1.5-animated.zip
+resource-pack-id=975cfc35-75b4-4190-a934-d02a54c94378
+resource-pack-sha1=837def4784f800c6b48b86d36f5a769408c8f9ac
 ```
 
 Die gleichen Werte stehen in `server.properties.example`. Bei einem Hosting-Panel
-die URL unter Resource Pack und die Prüfsumme unter Resource Pack SHA-1 eintragen.
+die URL unter Resource Pack, die ID unter Resource Pack ID und die Prüfsumme unter
+Resource Pack SHA-1 eintragen.
 Wenn das Pack verpflichtend sein soll, zusätzlich `require-resource-pack=true` setzen.
 Bei jeder Änderung der ZIP muss auch die SHA-1-Prüfsumme aktualisiert werden.
 
@@ -85,8 +101,8 @@ python scripts/build_pack.py
 python scripts/build_pack.py --check
 ```
 
-Der Neubau erzeugt die v1.4.1-ZIP und aktualisiert `SHA1SUMS` sowie
-`server.properties.example`. Nach späteren Texturänderungen die Prüfsumme und Größe
+Der Neubau erzeugt die statische v1.4.1-ZIP. Die animierte v1.5-ZIP wird in
+Siege-xc-xv gebaut (siehe oben); `server.properties.example` zeigt auf v1.5. Nach späteren Texturänderungen die Prüfsumme und Größe
 in dieser README ebenfalls anpassen.
 Die Prüfung kontrolliert ZIP-CRC, alle JSON-Dateien, Item-/Modell-/Texturzuordnungen,
 Sprachschlüssel, PNG-Abmessungen, Pack-Format, Server-Prüfsumme und den bytegleichen
@@ -94,9 +110,10 @@ Erhalt sämtlicher nicht überschriebener Originaldateien.
 
 ## Paketdaten
 
-- Datei: `Siege-Yom-Kippur-1.21.11-v1.4.1-resources.zip`
-- Größe: 5.951.581 Bytes
-- SHA-1: `35b77336c9d5a7a76001cb838d177293dc4b5918`
+- Datei: `Siege-Yom-Kippur-1.21.11-v1.5-animated.zip`
+- Größe: 17.351.422 Bytes
+- SHA-1: `837def4784f800c6b48b86d36f5a769408c8f9ac`
+- Pack-ID: `975cfc35-75b4-4190-a934-d02a54c94378`
 - Ressourcenpaket-Format: 75 (Minecraft Java 1.21.11)
 - `pack.mcmeta` und `assets/` liegen direkt im ZIP-Hauptverzeichnis.
 

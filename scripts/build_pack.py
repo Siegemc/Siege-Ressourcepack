@@ -22,7 +22,6 @@ ITEMS = {
     'netherite_ingot': ('steel', 'Steel'),
 }
 LOCALES = ('de_de', 'en_us', 'en_gb')
-URL = f'https://raw.githubusercontent.com/Siegemc/Siege-Ressourcepack/main/{TARGET.name}'
 
 
 def sha1(path):
@@ -89,9 +88,6 @@ def validate():
             require(json.loads(pack.read(f'assets/minecraft/lang/{locale}.json')) == labels,
                     f'Incorrect resource names: {locale}')
     checksum = sha1(TARGET)
-    properties = (ROOT / 'server.properties.example').read_text(encoding='utf-8')
-    require(f'resource-pack={URL}\n' in properties, 'Incorrect server download URL.')
-    require(f'resource-pack-sha1={checksum}\n' in properties, 'Incorrect server SHA-1.')
     sums = (ROOT / 'SHA1SUMS').read_text(encoding='utf-8')
     for path in (BASE, PREVIOUS, TARGET):
         require(f'{sha1(path)}  {path.name}\n' in sums, f'Missing checksum: {path.name}')
@@ -117,11 +113,11 @@ def build():
             info.external_attr = 0o100644 << 16
             pack.writestr(info, data, compresslevel=9)
     staging.replace(TARGET)
-    checksum = sha1(TARGET)
-    (ROOT / 'SHA1SUMS').write_text(''.join(f'{sha1(p)}  {p.name}\n' for p in (BASE, PREVIOUS, TARGET)),
-                                 encoding='utf-8', newline='\n')
-    (ROOT / 'server.properties.example').write_text(
-        f'resource-pack={URL}\nresource-pack-sha1={checksum}\n', encoding='utf-8', newline='\n')
+    # Later releases (v1.5 animated) are built in Siege-xc-xv; keep their checksums and server settings.
+    own = {p.name: f'{sha1(p)}  {p.name}\n' for p in (BASE, PREVIOUS, TARGET)}
+    other = [line + '\n' for line in (ROOT / 'SHA1SUMS').read_text(encoding='utf-8').splitlines()
+             if line.split('  ', 1)[-1] not in own]
+    (ROOT / 'SHA1SUMS').write_text(''.join(own.values()) + ''.join(other), encoding='utf-8', newline='\n')
     validate()
 
 
